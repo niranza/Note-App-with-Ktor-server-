@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Ktor Note Application</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="title">Title</string>
+    <string name="note_content">Note Content</string>
+    <string name="login_with_an_existing_account">Login with an existing Account</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="not_a_member_yet_nswipe_up_to_register">Not a member yet?\nSwipe up to register!</string>
+    <string name="register_a_new_account">Register a new Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="all_notes">All Notes</string>
+    <string name="add_note">Add Note</string>
+    <string name="note_title">Note Title</string>
+    <string name="synced">Synced</string>
+    <string name="note_synced">Not Synced</string>
+    <string name="problem_with_server">Problem with the server</string>
+    <string name="could_not_connect_to_server">Couldn\'t connect to server. Check your internet connection</string>
+    <string name="fill_all_fields">Please fill out all the fields</string>
+    <string name="password_do_not_match">Passwords do not match</string>
+    <string name="successfully_registered">Successfully registered an account</string>
+    <string name="unknown_error">An unknown error occurred</string>
+    <string name="successfully_logged_in">Successfully logged in account</string>
+    <string name="logout">Logout</string>
+    <string name="choose_color">Choose a color</string>
+    <string name="cancel">Cancel</string>
+    <string name="note_not_found">Note not found</string>
+    <string name="note_successfully_deleted">Note was successfully deleted</string>
+    <string name="undo">UNDO</string>
+    <string name="owner_empty">The owner can\'t be empty</string>
+    <string name="add_owner_to_note">Add owner to Note</string>
+    <string name="add_owner_dialog_message">Enter an E-Mail of a person you want to share the note with. This person will be able to read and edit the note.</string>
+    <string name="add">Add</string>
+    <string name="success_add_owner">Successfully added owner to note</string>
+</resources>

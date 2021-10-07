@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediumDarkBackground"
+    android:padding="16dp">
+
+        <View
+            android:id="@+id/view_note_color"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_shape"
+            app:layout_constraintBottom_toBottomOf="@id/et_note_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_note_title" />
+
+        <EditText
+            android:id="@+id/et_note_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:padding="16dp"
+            android:saveEnabled="true"
+            android:textColorHint="@android:color/tertiary_text_dark"
+            app:layout_constraintEnd_toStartOf="@+id/view_note_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_note_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="@string/note_content"
+            android:inputType="textMultiLine"
+            android:padding="16dp"
+            android:gravity="top"
+            android:background="@null"
+            android:saveEnabled="true"
+            android:textColorHint="@android:color/tertiary_text_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_note_title"
+            android:importantForAutofill="no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

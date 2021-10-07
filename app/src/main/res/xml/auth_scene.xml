@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="100"
+        motion:motionInterpolator="linear">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/layout_register"
+            motion:touchAnchorSide="top" />
+
+    </Transition>
+
+    <!-- login -->
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/layout_register"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/lightBackground" />
+        </Constraint>
+
+        <Constraint android:id="@id/tv_register_text">
+
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Don't have an account?\nSwipe up to register!" />
+        </Constraint>
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/pb_login"
+            motion:layout_editor_absoluteX="182dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pb_login"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_editor_absoluteX="182dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <!-- register -->
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/layout_register"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/lightBackground" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/iv_arrow_up_left"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            motion:layout_constraintStart_toStartOf="@id/layout_register"
+            motion:layout_constraintTop_toTopOf="@id/layout_register">
+            <Transform android:rotation="180" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/iv_arrow_up_right"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            motion:layout_constraintEnd_toEndOf="@id/layout_register"
+            motion:layout_constraintTop_toTopOf="@id/layout_register">
+            <Transform android:rotation="-180" />
+        </Constraint>
+
+        <Constraint android:id="@id/tv_register_text">
+            <CustomAttribute
+                motion:attributeName="Text"
+                motion:customStringValue="Already have an account?\nSwipe down to login!" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/tv_login_title"
+            android:layout_width="match_parent"
+            android:alpha="0"
+            motion:layout_constraintBottom_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/til_login_email"
+            android:layout_width="match_parent"
+            android:alpha="0"
+            motion:layout_constraintBottom_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/til_login_password"
+            android:layout_width="match_parent"
+            android:alpha="0"
+            motion:layout_constraintBottom_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/btn_login"
+            android:layout_width="match_parent"
+            android:alpha="0"
+            motion:layout_constraintBottom_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/tv_register_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            motion:layout_constraintBottom_toTopOf="@id/guideline"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@id/til_register_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toStartOf="@id/iv_arrow_up_right"
+            motion:layout_constraintStart_toEndOf="@id/iv_arrow_up_left"
+            motion:layout_constraintTop_toBottomOf="@id/tv_register_title" />
+
+        <Constraint
+            android:id="@id/til_register_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            motion:layout_constraintEnd_toStartOf="@id/iv_arrow_up_right"
+            motion:layout_constraintStart_toEndOf="@id/iv_arrow_up_left"
+            motion:layout_constraintTop_toBottomOf="@id/til_register_email" />
+
+        <Constraint
+            android:id="@id/til_register_password_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            motion:layout_constraintEnd_toStartOf="@id/iv_arrow_up_right"
+            motion:layout_constraintStart_toEndOf="@id/iv_arrow_up_left"
+            motion:layout_constraintTop_toBottomOf="@id/til_register_password" />
+
+        <Constraint
+            android:id="@id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toStartOf="@id/iv_arrow_up_right"
+            motion:layout_constraintTop_toBottomOf="@id/til_register_password_confirm" />
+
+    </ConstraintSet>
+
+</MotionScene>
