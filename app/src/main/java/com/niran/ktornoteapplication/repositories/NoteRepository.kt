@@ -13,6 +13,7 @@ import com.niran.ktornoteapplication.utils.InternetUtils.hasInternetConnection
 import com.niran.ktornoteapplication.utils.Resource
 import com.niran.ktornoteapplication.utils.networkBoundResource
 import kotlinx.coroutines.flow.Flow
+import timber.log.Timber
 import java.lang.Exception
 import javax.inject.Inject
 
@@ -104,6 +105,7 @@ class NoteRepository @Inject constructor(
                 )
             } else return@with Resource.Error(response.message())
         } catch (e: Exception) {
+            Timber.e("Error -> ${e.message}")
             return@with Resource.Error(getString(R.string.could_not_connect_to_server))
         }
     }
