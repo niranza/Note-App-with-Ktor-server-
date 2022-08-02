@@ -5,17 +5,17 @@ integrating:
 * MVVM pattern
 * lifecycle dependencies, Live data, Flow
 * RecyclerView
-* Android Material Design
+* Android Material Design principles
 * Coroutines
 * Navigation Component
 * Notifications
 * Menu
 * Retrofit
 * Authentication
-* Markown library
+* In-App-Markown library
 * Timber library
 * Motion layout
 * Dependency injection with Dagger Hilt
 * Gson library
 * Coil- Library for loading images
-* using local chaching with networkBoundResource
+* use of local chaching with networkBoundResource
