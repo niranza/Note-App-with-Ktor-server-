@@ -1,4 +1,4 @@
-# Note-App-with-Ktor-server-
+# Note-App
 Note Taking App with custom built Ktor server  
 integrating:
 * room database
